@@ -8,3 +8,5 @@ if(ENABLE_ASAN)
     add_compile_options(${ASAN_COMPILE_FLAGS})
     add_link_options(${ASAN_LINK_FLAGS})
 endif ()
+
+add_compile_options(-Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror)

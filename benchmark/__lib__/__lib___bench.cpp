@@ -6,7 +6,8 @@ static void BM_SomeFunction(benchmark::State& state) {
     // Perform setup here
     for (auto _ : state) {
         // This code gets timed
-        __namespace__::foo(42, 42);
+
+        __namespace__::foo(42, 11);
     }
 }
 
