@@ -1,3 +1,3 @@
-add_executable(demo_bench demo_bench.cpp)
+add_executable(__lib___bench __lib___bench.cpp)
 
-target_link_libraries(demo_bench lib benchmark::benchmark)
+target_link_libraries(__lib___bench __lib__ benchmark::benchmark)

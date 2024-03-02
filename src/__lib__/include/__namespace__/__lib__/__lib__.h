@@ -1,5 +1,5 @@
 #pragma once
 
-namespace demo__lib__ {
+namespace __namespace__ {
 int foo(int a, int b);
 };
