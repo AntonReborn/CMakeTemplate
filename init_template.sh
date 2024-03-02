@@ -50,7 +50,7 @@ rename_files "__lib__" "$lib_replacement" "$target_directory"
 replace_in_files "__namespace__" "$namespace_replacement" "$target_directory"
 rename_files "__namespace__" "$namespace_replacement" "$target_directory"
 
-rename_files "__project__" "$project_replacement" "$target_directory"
+replace_in_files "__project__" "$project_replacement" "$target_directory"
 
 echo "Replacements complete."
 
