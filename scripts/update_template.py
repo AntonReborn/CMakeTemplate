@@ -13,7 +13,9 @@ def replace_in_file(file_path, old_string, new_string):
         file.write(filedata)
 
 def rename_files(root_dir, old_string, new_string):
-    for dirpath, dirnames, filenames in os.walk(root_dir, topdown=False):
+    for dirpath, dirnames, filenames in os.walk(root_dir, topdown=True):
+        # Skip hidden directories
+        dirnames[:] = [d for d in dirnames if not d.startswith('.')]
         for filename in filenames:
             if old_string in filename:
                 new_filename = filename.replace(old_string, new_string)
