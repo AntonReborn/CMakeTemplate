@@ -1,3 +1,3 @@
 include(Benchmark)
 
-add_subdirectory(lib)
+add_subdirectory(__lib__)

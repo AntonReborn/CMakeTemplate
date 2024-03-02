@@ -1,8 +1,8 @@
-#include "include/lib/demolib.h"
+#include "include/__lib__/__lib__.h"
 
 #include <vector>
 
-int demolib::foo(int a, int b) {
+int demo__lib__::foo(int a, int b) {
     std::vector<int> t;
     t.resize(1000);
 //    t[10] = 1;

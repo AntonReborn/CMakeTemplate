@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 #include <vector>
 
-#include "lib/demolib.h"
+#include "__lib__/__lib__.h"
 
 // Demonstrate some basic assertions.
 TEST(Lib_Test, Basic_42) {
     // Expect equality.
-    EXPECT_EQ(demolib::foo(42, 42), 84);
+    EXPECT_EQ(demo__lib__::foo(42, 42), 84);
 }
 
 TEST(Lib_Test, Basic_Out_Of_Boundary) {

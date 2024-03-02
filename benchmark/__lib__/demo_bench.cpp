@@ -1,11 +1,11 @@
 #include <benchmark/benchmark.h>
-#include <lib/demolib.h>
+#include <__lib__/demo__lib__.h>
 
 static void BM_SomeFunction(benchmark::State& state) {
     // Perform setup here
     for (auto _ : state) {
         // This code gets timed
-        demolib::foo(42, 42);
+        demo__lib__::foo(42, 42);
     }
 }
 
