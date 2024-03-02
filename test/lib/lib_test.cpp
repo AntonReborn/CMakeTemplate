@@ -1,9 +1,17 @@
 #include <gtest/gtest.h>
+#include <vector>
+
+#include "lib/demolib.h"
 
 // Demonstrate some basic assertions.
-TEST(HelloTest, BasicAssertions) {
-    // Expect two strings not to be equal.
-    EXPECT_STRNE("hello", "world");
+TEST(Lib_Test, Basic_42) {
     // Expect equality.
-    EXPECT_EQ(7 * 6, 42);
+    EXPECT_EQ(demolib::foo(42, 42), 84);
+}
+
+TEST(Lib_Test, Basic_Out_Of_Boundary) {
+    std::vector<int> t;
+    t.resize(10);
+//    t[10] = 1;
+    EXPECT_EQ(t[0], 0);
 }
