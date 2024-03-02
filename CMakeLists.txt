@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
-project(BaseTemplate)
+
+project(__project__)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 enable_testing()

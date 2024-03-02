@@ -7,6 +7,7 @@ export LC_CTYPE=C
 read -p "Enter the replacement string for __app__: " app_replacement
 read -p "Enter the replacement string for __lib__: " lib_replacement
 read -p "Enter the replacement string for __namespace__: " namespace_replacement
+read -p "Enter the replacement string for __project__: " project_replacement
 
 target_directory="."
 
@@ -49,8 +50,17 @@ rename_files "__lib__" "$lib_replacement" "$target_directory"
 replace_in_files "__namespace__" "$namespace_replacement" "$target_directory"
 rename_files "__namespace__" "$namespace_replacement" "$target_directory"
 
+rename_files "__project__" "$project_replacement" "$target_directory"
+
 echo "Replacements complete."
 
 echo "Removing init_template.sh"
 rm init_template.sh
+
+current_dir=$(pwd)
+parent_dir=$(dirname "$current_dir")
+cd "$parent_dir"
+mv "$(basename "$current_dir")" "$project_replacement"
+cd "$new_name"
+echo "New directory path: $(pwd)"
 
